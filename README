@@ -1,0 +1,114 @@
+README for Chrono - Scientific Time Series Analyzer
+===================================================
+
+This is Chrono, the Scientific Time Series Analyzer, a free software
+package written in C.  Chrono provides a command-line interface (CLI)
+for the analysis, processing, and visualization of time series data,
+with a focus on scientific and engineering applications.
+
+The software integrates the GNU Scientific Library (GSL) for numerical
+routines and mathematical functions, and GNUnet for decentralized,
+peer-to-peer sharing of time series datasets.  This combination allows
+researchers to both analyze local data and collaborate securely with
+peers in a distributed environment.
+
+------------------------------------------------------------------------
+Features
+------------------------------------------------------------------------
+
+  * Generic handling of time series data: numerical, experimental,
+    physical, financial, or simulated.
+  * Statistical and spectral analysis using GSL:
+      - Means, variances, correlations
+      - Fourier transforms
+      - Linear and nonlinear regression
+      - Random processes
+  * Time-domain operations:
+      - Smoothing, resampling, filtering
+      - Windowing and convolution
+      - Peak and anomaly detection
+  * Peer-to-peer dataset exchange using GNUnet:
+      - Publish and fetch time series
+      - Query by metadata and tags
+      - Ensure integrity and privacy of shared data
+  * Fully scriptable CLI for batch processing and automation.
+
+------------------------------------------------------------------------
+Requirements
+------------------------------------------------------------------------
+
+  * A C99-compatible compiler (GCC recommended).
+  * GNU Scientific Library (GSL).
+  * GNUnet libraries and services.
+  * Standard POSIX environment (tested on GNU/Linux).
+
+------------------------------------------------------------------------
+Installation
+------------------------------------------------------------------------
+
+To build Chrono, run:
+
+   ./configure
+   make
+   make install
+
+The `configure` script supports standard GNU options such as
+`--prefix` for installation directories.  See `INSTALL` for more
+details.
+
+------------------------------------------------------------------------
+Usage
+------------------------------------------------------------------------
+
+Chrono is invoked from the command line.  Example:
+
+   chrono analyze data.csv --fft --plot
+
+   chrono publish results.dat --tag "plasma-experiment"
+
+   chrono fetch --tag "plasma-experiment" --output remote.dat
+
+All options are documented in the manual pages and in the Texinfo
+manual (see `doc/chrono.info` once built).
+
+------------------------------------------------------------------------
+Documentation
+------------------------------------------------------------------------
+
+Full documentation is provided in Texinfo format.  To read it, type:
+
+   info chrono
+
+A PDF and HTML version can be generated from the Texinfo sources in
+the `doc/` directory.
+
+------------------------------------------------------------------------
+License
+------------------------------------------------------------------------
+
+Chrono is free software; you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the
+Free Software Foundation; either version 3 of the License, or (at your
+option) any later version.
+
+Chrono is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+for more details.
+
+A copy of the GNU GPL is provided in the file `COPYING`.
+
+------------------------------------------------------------------------
+Contributing
+------------------------------------------------------------------------
+
+Bug reports, feature requests, and patches are welcome.  Please send
+them to the Chrono mailing list (see `MAILING-LIST`) or use the
+project issue tracker.
+
+------------------------------------------------------------------------
+Authors
+------------------------------------------------------------------------
+
+Chrono was originally written by 4137314 and contributors.  See the
+file `AUTHORS` for a complete list of contributors.
